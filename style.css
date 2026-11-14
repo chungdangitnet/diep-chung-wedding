@@ -662,10 +662,12 @@ body {
 }
 
 .parent-addr {
-    font-family:  "Times New Roman";
-   margin-top: 6px; /* Xóa margin-top: auto và dùng khoảng cách cố định 6px */
+    font-family: "Times New Roman", serif;
+    margin-top: 6px;
     padding-top: 0;
-    font-size: clamp(10px, 3vw, 13.5px);
+    font-size: clamp(7.8px, 2.2vw, 13.5px); /* Tự co nhỏ vừa đủ 1 cột trên mobile, PC vẫn giữ 13.5px */
+    letter-spacing: -0.02em; /* Thu hẹp cực nhẹ độ giãn chữ để câu dài nằm trọn 1 hàng */
+    white-space: nowrap; /* Khóa cứng nằm trên 1 dòng, không rớt chữ xuống dưới */
     line-height: 1.4;
     opacity: 0.9;
 }
@@ -789,12 +791,14 @@ body {
 }
 
 .lunar-date {
-    font-family: "Times New Roman", serif;
-    font-size: 16px !important;
-    letter-spacing: 0.08em;
+   font-family: "Times New Roman", serif;
+    font-size: clamp(9.5px, 2.7vw, 15px) !important; /* Tự co vừa khít trên mobile (~10-11px), PC vẫn giữ 15px */
+    letter-spacing: clamp(0.03em, 0.8vw, 0.08em); /* Thu hẹp độ giãn chữ trên mobile để đủ chỗ nằm 1 dòng */
+    white-space: nowrap; /* Khóa cứng nằm trên 1 hàng duy nhất, không rớt chữ */
     text-transform: uppercase;
     color: rgba(236, 232, 225, 0.7);
     margin: 0;
+    text-align: center;
 }
 
 /* Cành hoa bay trên Mobile: Thu gọn ra sát mép phải để không che mất chữ */
