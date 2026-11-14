@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiệp Cưới - Kiều Diệp & Ngọc Chung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Dán dòng này thay cho link Google Fonts cũ ở thẻ <head> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Ms+Madi&family=The+Nautigal:wght@400;700&family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=The+Nautigal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Liên kết tới file style.css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==================== 1. MÀN HÌNH MỞ THIỆP ==================== -->
+    <div id="splash-screen">
+      <div class="hearts-container" id="heartsContainer"></div>
+
+      <div class="welcome-card">
+        <!-- Họa tiết hoa 2 bên viền thẻ -->
+        <img
+          src="images/flower2-decoration.webp"
+          alt="Hoa trang trí"
+          class="floral-left"
+        />
+        <img
+          src="images/flower2-decoration.webp"
+          alt="Hoa trang trí"
+          class="floral-right"
+        />
+
+        <div class="top-badge">
+          <svg
+            class="heart-beat-icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </div>
+
+        <h1 class="splash-names">
+          Kiều Diệp
+          <span>&</span>
+          Ngọc Chung
+        </h1>
+
+        <!-- Đường kẻ hoa văn mờ 2 đầu -->
+        <div class="divider-floral">
+          <span class="line-left"></span>
+          <span class="floral-symbol">❦</span>
+          <span class="line-right"></span>
+        </div>
+
+        <p class="splash-date">30 tháng 04 năm 2027</p>
+
+        <p class="invite-intro">
+          Thân mời:
+          <span id="guestNameSplash" class="guest-display-splash"
+            >Quý Khách</span
+          >
+        </p>
+
+        <button class="btn-open" onclick="openInvitation()">Mở thiệp</button>
+      </div>
+    </div>
+
+    <!-- ==================== 2. NỘI DUNG THIỆP CHÍNH (CHUẨN KÍCH THƯỚC MẪU) ==================== -->
+    <div id="main-invitation">
+      <!-- Hiệu ứng nền giấy mỹ thuật -->
+      <div class="paper-overlay"></div>
+
+      <!-- Hình nền lâu đài chìm lặp lại dọc suốt toàn bộ thiệp -->
+      <div class="castle-bg-repeat"></div>
+
+      <!-- HEADER: SAVE THE DATE & PHONG BÌ -->
+      <header class="invitation-header">
+        <p class="save-the-date">Save The Date</p>
+
+        <!-- Cụm phong bì dùng 2 lớp ảnh thật -->
+        <div class="hero-envelope-box">
+          <!-- 1. LỚP DƯỚI: Ảnh nền sau của phong bì (z-index: 10) -->
+          <img
+            src="images/envelope-background.webp"
+            alt="Nền phong bì"
+            class="envelope-bg-img"
+          />
+
+          <!-- 2. LỚP GIỮA: Ảnh cưới nghiêng 12 độ có hiệu ứng bay nhẹ (z-index: 20) -->
+          <div class="hero-photo-float">
+            <div class="hero-photo-frame">
+              <img src="images/anhcuoi.jpg" alt="Cô dâu chú rể" />
+            </div>
+          </div>
+
+          <!-- 3. CÀNH HOA TRANG TRÍ: Nằm góc trái trên (z-index: 25) -->
+          <div class="hero-flower-float">
+            <img
+              src="images/flower2-decoration.webp"
+              alt="Hoa trang trí"
+              class="hero-flower-img"
+            />
+          </div>
+
+          <!-- 4. LỚP TRÊN: Ảnh nắp phong bì phía trước đè lên ảnh cưới (z-index: 30) -->
+          <img
+            src="images/envelope-cover.webp"
+            alt="Nắp phong bì"
+            class="envelope-cover-img"
+          />
+        </div>
+
+        <div class="hero-couple-block">
+          <div class="monogram-cd" aria-label="C & D">
+            <span class="mono-letter mono-c">C</span>
+            <span class="mono-letter mono-d">D</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- SECTION 1: THÔNG TIN LỄ CƯỚI (Rộng 560px) -->
+      <section class="card-section">
+        <!-- Cành hoa thò ra bên phải -->
+        <div class="floating-flower-right">
+          <img src="images/flower2-decoration.webp" alt="" />
+        </div>
+
+        <div class="burgundy-box">
+          <h2 class="box-heading">THÔNG TIN LỄ CƯỚI</h2>
+
+          <div class="parents-columns">
+            <div class="parent-col">
+              <span class="parent-title">NHÀ GÁI</span>
+              <div class="parent-names-box">
+                <span class="parent-name">Bà Nguyễn Thị Thành</span>
+              </div>
+              <span class="parent-addr">Thôn Đức Tân, Mộ Đức, Quảng Ngãi</span>
+            </div>
+
+            <div class="parent-divider"></div>
+
+            <div class="parent-col">
+              <span class="parent-title">NHÀ TRAI</span>
+              <div class="parent-names-box">
+                <span class="parent-name">Ông Đặng Văn Năm</span>
+                <span class="parent-name">Bà Lê Thị Phương Thảo</span>
+              </div>
+              <span class="parent-addr">Thôn 5, Dang Kang, Đăk Lăk</span>
+            </div>
+          </div>
+          <p class="announce-lines">
+            TRÂN TRỌNG BÁO TIN<br />LỄ VU QUY CỦA CHÚNG TÔI
+          </p>
+
+          <div class="couple-detail-block">
+            <h3 class="detail-name">Nguyễn Thị Kiều Diệp</h3>
+            <div class="detail-role">Út Nữ</div>
+            <div class="detail-amp">&amp;</div>
+            <h3 class="detail-name">Đặng Ngọc Chung</h3>
+            <div class="detail-role">Trưởng Nam</div>
+          </div>
+
+          <div class="ceremony-info-block">
+            <p class="ceremony-place">
+              LỄ VŨ QUY ĐƯỢC CỬ HÀNH TẠI<br />TƯ GIA NHÀ GÁI
+            </p>
+
+            <div class="time-day-row">
+              <span>VÀO LÚC 09:00</span>
+              <span>THỨ BẢY</span>
+            </div>
+
+            <div class="big-date-display">
+              <span class="date-num">30</span>
+              <div class="date-line"></div>
+              <div class="date-month-year">
+                <span>THÁNG 04</span>
+                <span>2027</span>
+              </div>
+            </div>
+
+            <p class="lunar-date">(Tức ngày 24 tháng 03 năm Đinh Mùi)</p>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 2: Album ảnh -->
+      <section class="album-wrapper">
+        <h2 class="section-heading-dark">ALBUM ẢNH</h2>
+
+        <div class="carousel-3d-container">
+          <button
+            type="button"
+            class="nav-arrow prev-arrow"
+            onclick="prevSlide()"
+            aria-label="Previous photo"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="nav-arrow next-arrow"
+            onclick="nextSlide()"
+            aria-label="Next photo"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+
+          <!-- Đủ 7 tấm ảnh để chia đều: 1 giữa + 3 trái + 3 phải -->
+          <div class="carousel-stage" id="carouselStage">
+            <div class="slide-item" onclick="goToSlide(0)">
+              <img
+                src="https://assets.chungdoi.com/photo-library/design/abd329aeb24dfdb5db34be2cd39ccbe4b5b0f943f66a89f8c855b2d615cc4e24.webp"
+                alt="Ảnh 1"
+              />
+            </div>
+            <div class="slide-item" onclick="goToSlide(1)">
+              <img
+                src="https://assets.chungdoi.com/photo-library/design/09c78712bd94460430a8a633a8e72a0576016ea56e183d89d97c551649ee9ece.webp"
+                alt="Ảnh 2"
+              />
+            </div>
+            <div class="slide-item" onclick="goToSlide(2)">
+              <img
+                src="https://assets.chungdoi.com/photo-library/design/d7695e2fed94d3347e78455624c26164a088b3a365bce422de1ef752fdcab2c1.webp"
+                alt="Ảnh 3"
+              />
+            </div>
+            <div class="slide-item" onclick="goToSlide(3)">
+              <img
+                src="https://assets.chungdoi.com/photo-library/design/07db56b959aa4410010132a54bfbedd0518e911389a0c6623b946096377bbb97.webp"
+                alt="Ảnh 4"
+              />
+            </div>
+            <div class="slide-item" onclick="goToSlide(4)">
+              <img
+                src="https://assets.chungdoi.com/photo-library/design/a054d52f9d4d1ed606a4226463f555e359dee874ba7138eab94e10a18b39ddda.webp"
+                alt="Ảnh 5"
+              />
+            </div>
+            <div class="slide-item" onclick="goToSlide(5)">
+              <img
+                src="https://assets.chungdoi.com/photo-library/design/1cfc881768c6a5c42054d40c4239f4f56b59a159692734f3deb8e79fc55499d2.webp"
+                alt="Ảnh 6"
+              />
+            </div>
+            <div class="slide-item" onclick="goToSlide(6)">
+              <img
+                src="https://assets.chungdoi.com/photo-library/design/e13655d0de07f307824d9dd1ad5a399434ebc0c016d86aaa4c1bde7452a4abb1.webp"
+                alt="Ảnh 7"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+      </section>
+
+      <!-- SECTION 3: THÔNG TIN TIỆC CƯỚI & LỊCH (Rộng 560px) -->
+      <section class="card-section">
+        <div class="burgundy-box reception-box">
+          <div class="reception-inner">
+            <h2 class="reception-title">THÔNG TIN TIỆC CƯỚI</h2>
+
+            <div class="reception-body">
+              <h3 class="reception-subtitle">Tiệc cưới sẽ diễn ra vào lúc:</h3>
+
+              <div class="reception-time-top">
+                <span>10:30</span>
+                <span>THỨ BẢY</span>
+              </div>
+
+              <div class="reception-date-row">
+                <span class="reception-day">30</span>
+                <div class="reception-divider"></div>
+                <div class="reception-month-year">
+                  <span class="reception-month">THÁNG 04</span>
+                  <span class="reception-year">2027</span>
+                </div>
+              </div>
+
+              <div class="reception-lunar">
+                (Tức ngày 24 tháng 03 năm Đinh Mùi)
+              </div>
+
+              <div class="reception-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-label">Đón khách</span>
+                  <span class="timeline-hour">10:00</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-label">Khai tiệc</span>
+                  <span class="timeline-hour">10:30</span>
+                </div>
+              </div>
+
+              <!-- Bảng lịch tháng 1 / 2026 -->
+              <div class="wedding-calendar-card">
+                <div class="calendar-header-script">Tháng 04 / 2027</div>
+
+                <div class="calendar-weekdays">
+                  <div>T2</div>
+                  <div>T3</div>
+                  <div>T4</div>
+                  <div>T5</div>
+                  <div>T6</div>
+                  <div>T7</div>
+                  <div>CN</div>
+                </div>
+
+                <div class="calendar-days-grid">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>
+                  <div>4</div>
+                  <div>5</div>
+                  <div>6</div>
+                  <div>7</div>
+                  <div>8</div>
+                  <div>9</div>
+                  <div>10</div>
+                  <div>11</div>
+                  <div>12</div>
+                  <div>13</div>
+                  <div>14</div>
+                  <div>15</div>
+                  <div>16</div>
+                  <div>17</div>
+                  <div>18</div>
+                  <div>19</div>
+                  <div>20</div>
+                  <div>21</div>
+                  <div>22</div>
+                  <div>23</div>
+                  <div>24</div>
+                  <div>25</div>
+                  <div>26</div>
+                  <div>27</div>
+                  <div>28</div>
+                  <div>29</div>
+                  <div class="heart-day">
+                    <svg viewBox="0 0 24 22" fill="#511419">
+                      <path
+                        d="M12 21C12 21 1.5 13.5 1.5 7.5C1.5 4.46 3.96 2 7 2C8.76 2 10.35 2.81 11.4 4.09L12 4.8L12.6 4.09C13.65 2.81 15.24 2 17 2C20.04 2 22.5 4.46 22.5 7.5C22.5 13.5 12 21 12 21Z"
+                      ></path>
+                    </svg>
+                    <span>30</span>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+
+              <a
+                href="https://www.google.com/calendar/render?action=TEMPLATE&text=%C4%90%C3%A1m%20c%C6%B0%E1%BB%9Bi%20%C4%90%E1%BA%B7ng%20Ho%C3%A0ng%20Long%20%26%20V%C5%A9%20B%E1%BA%A3o%20Ng%E1%BB%8Dc&dates=20260103T110000Z/20260103T130000Z&ctz=Asia/Ho_Chi_Minh&details=Ti%E1%BB%87c%20c%C6%B0%E1%BB%9Bi%20c%E1%BB%A7a%20%C4%90%E1%BA%B7ng%20Ho%C3%A0ng%20Long%20%26%20V%C5%A9%20B%E1%BA%A3o%20Ng%E1%BB%8Dc%20t%E1%BA%A1i%20Trung%20T%C3%A2m%20H%E1%BB%99i%20Ngh%E1%BB%8B%20White%20Palace%2C%20194%20Ho%C3%A0ng%20V%C4%83n%20Th%E1%BB%A5%2C%20Ph%C6%B0%E1%BB%9Dng%209%2C%20Qu%E1%BA%ADn%20Ph%C3%BA%20Nhu%E1%BA%ADn%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh&location=Trung%20T%C3%A2m%20H%E1%BB%99i%20Ngh%E1%BB%8B%20White%20Palace%2C%20194%20Ho%C3%A0ng%20V%C4%83n%20Th%E1%BB%A5%2C%20Ph%C6%B0%E1%BB%9Dng%209%2C%20Qu%E1%BA%ADn%20Ph%C3%BA%20Nhu%E1%BA%ADn%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh"
+                target="_blank"
+                id="calendarLink"
+                rel="noopener noreferrer"
+                class="add-to-calendar-link"
+              >
+                Thêm vào lịch
+              </a>
+            </div>
+
+            <div class="rsvp-btn-wrap">
+              <button type="button" class="rsvp-btn" onclick="openRsvpModal()">
+                XÁC NHẬN THAM DỰ
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: BẢN ĐỒ ĐỊA ĐIỂM -->
+      <section class="map-wrapper">
+        <h3 class="section-heading-dark">TIỆC CƯỚI SẼ TỔ CHỨC TẠI</h3>
+        <p class="venue-desc">Thôn Đức Tân, Mộ Đức, Quảng Ngãi</p>
+
+        <div class="map-frame-box">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d963.6640895628647!2d108.88398092114348!3d14.956226717108315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3168ff0069132599%3A0x63068ef01a7e1a4e!2zROG7i2NoIHbhu6Ug4bqoTSBUSOG7sEMgTmfhu41jIMSQ4bupYw!5e0!3m2!1sen!2s!4v1794540113150!5m2!1sen!2s"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Bản đồ địa điểm tổ chức tiệc cưới"
+          ></iframe>
+        </div>
+
+        <a
+          href="https://maps.app.goo.gl/m9rFrUZ2s76JD8RH8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-direction"
+        >
+          ➤ Chỉ đường
+        </a>
+      </section>
+
+      <!-- SECTIO 6: LỊCH TRÌNH NGÀY CƯỚI -->
+      <section class="card-section schedule-section">
+        <!-- Cành hoa bay góc trên bên phải -->
+        <div class="floating-flower-schedule" aria-hidden="true">
+          <img src="images/flower2-decoration.webp" alt="" />
+        </div>
+
+        <div class="burgundy-box schedule-box">
+          <!-- Lớp phủ vân giấy chìm bên trong khung đỏ -->
+          <img
+            src="images/paper.webp"
+            alt=""
+            aria-hidden="true"
+            class="box-paper-overlay"
+          />
+
+          <div class="schedule-inner">
+            <h2 class="schedule-title">LỊCH TRÌNH NGÀY CƯỚI</h2>
+
+            <ol class="schedule-timeline">
+              <!-- Mốc 1: 17:00 -->
+              <li class="schedule-row">
+                <span class="schedule-time">10:00</span>
+                <span class="schedule-node is-first" aria-hidden="true">
+                  <span class="node-line"></span>
+                  <span class="node-dot"></span>
+                </span>
+                <span class="schedule-event">Đón khách</span>
+              </li>
+
+              <!-- Mốc 2: 18:00 + Icon camera -->
+              <li class="schedule-row">
+                <span class="schedule-time">
+                  <span class="time-with-icon">
+                    <img
+                      src="images/camera.webp"
+                      alt=""
+                      aria-hidden="true"
+                      class="schedule-icon"
+                    />
+                    10:30
+                  </span>
+                </span>
+                <span class="schedule-node" aria-hidden="true">
+                  <span class="node-line"></span>
+                  <span class="node-dot"></span>
+                </span>
+                <span class="schedule-event">Khai tiệc</span>
+              </li>
+
+              <!-- Mốc 3: 18:30 + Icon bánh cưới -->
+              <li class="schedule-row">
+                <span class="schedule-time">
+                  <span class="time-with-icon">
+                    <img
+                      src="images/cake.webp"
+                      alt=""
+                      aria-hidden="true"
+                      class="schedule-icon"
+                    />
+                    10:45
+                  </span>
+                </span>
+                <span class="schedule-node" aria-hidden="true">
+                  <span class="node-line"></span>
+                  <span class="node-dot"></span>
+                </span>
+                <span class="schedule-event">Nghi thức cưới</span>
+              </li>
+
+              <!-- Mốc 4: 19:00 + Icon nâng ly / tiệc -->
+              <li class="schedule-row">
+                <span class="schedule-time">
+                  <span class="time-with-icon">
+                    <img
+                      src="images/cook.webp"
+                      alt=""
+                      aria-hidden="true"
+                      class="schedule-icon"
+                    />
+                    11:00
+                  </span>
+                </span>
+                <span class="schedule-node" aria-hidden="true">
+                  <span class="node-line"></span>
+                  <span class="node-dot"></span>
+                </span>
+                <span class="schedule-event">Cắt bánh &amp; nâng ly</span>
+              </li>
+
+              <!-- Mốc 5: 20:30 -->
+              <li class="schedule-row">
+                <span class="schedule-time">13:00</span>
+                <span class="schedule-node is-last" aria-hidden="true">
+                  <span class="node-line"></span>
+                  <span class="node-dot"></span>
+                </span>
+                <span class="schedule-event">Kết thúc tiệc</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION CUỐI: LỜI CẢM ƠN & ĐÓN TIẾP -->
+      <section class="closing-section">
+        <div class="closing-divider" aria-hidden="true">
+          <span class="line-left"></span>
+          <span class="floral-symbol">❦</span>
+          <span class="line-right"></span>
+        </div>
+
+        <p class="closing-message">
+          Rất hân hạnh được đón tiếp
+          <span class="guest-display-splash">Quý Khách</span>
+        </p>
+
+        <div class="closing-names">Diệp &amp; Chung</div>
+      </section>
+      <!-- TRÌNH PHÁT NHẠC NỀN -->
+      <audio id="bgMusic" loop preload="auto">
+        <source src="music/wedding-song.mp3" type="audio/mpeg" />
+      </audio>
+
+      <!-- NÚT ĐĨA NHẠC XOAY GÓC MÀN HÌNH -->
+      <button
+        type="button"
+        id="musicToggleBtn"
+        class="music-btn"
+        aria-label="Bật hoặc tắt nhạc nền"
+        title="Bật/Tắt nhạc"
+      >
+        <span class="music-icon">♫</span>
+      </button>
+      <!-- HIỆU ỨNG ÂM THANH KHI BẤM MỞ THIỆP (Không có thuộc tính loop) -->
+      <audio id="openSoundEffect" preload="auto">
+        <source src="music/open-effect.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+    <script>
+      // 1. Lấy tên khách mời từ URL (?guest=TenKhach)
+      const urlParams = new URLSearchParams(window.location.search);
+      const guestName = urlParams.get("guest");
+      if (guestName && guestName.trim() !== "") {
+        document.getElementById("splashGuestName").innerText = guestName;
+      }
+
+      // 2. Tạo trái tim bay ở màn hình mở đầu
+      const heartsContainer = document.getElementById("heartsContainer");
+      for (let i = 0; i < 18; i++) {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerText = "♥";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 12 + 10 + "px";
+        heart.style.animationDuration = Math.random() * 6 + 6 + "s";
+        heart.style.animationDelay = Math.random() * 5 + "s";
+        heartsContainer.appendChild(heart);
+      }
+
+      // 3. Mở thiệp
+      function openInvitation() {
+        document.getElementById("splash-screen").classList.add("hidden");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      // 4. Album ảnh
+      let currentIndex = 5; // Mặc định hiển thị tấm số 6 ở giữa giống ảnh mẫu
+      const slides = document.querySelectorAll(".slide-item");
+      const dotsContainer = document.getElementById("carouselDots");
+      const carouselContainer = document.querySelector(
+        ".carousel-3d-container",
+      );
+      let autoPlayTimer = null;
+      const AUTO_PLAY_DELAY = 3500; // Tự động chuyển ảnh sau mỗi 3.5 giây
+
+      // Tạo 7 dấu chấm điều hướng
+      dotsContainer.innerHTML = "";
+      slides.forEach((_, idx) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "c-dot";
+        dot.setAttribute("aria-label", `Go to photo ${idx + 1}`);
+        dot.onclick = () => goToSlide(idx);
+        dotsContainer.appendChild(dot);
+      });
+      const dots = document.querySelectorAll(".c-dot");
+
+      function updateCarousel() {
+        const total = slides.length;
+        slides.forEach((slide, i) => {
+          let offset = (i - currentIndex + total) % total;
+          if (offset > Math.floor(total / 2)) {
+            offset -= total;
+          }
+
+          const absOffset = Math.abs(offset);
+          const dir = offset === 0 ? 0 : offset > 0 ? 1 : -1;
+
+          slide.classList.toggle("is-active", offset === 0);
+
+          if (absOffset === 0) {
+            // Tấm trung tâm: To nhất, nằm chính giữa
+            slide.style.transform = "translateX(0%) scale(1)";
+            slide.style.opacity = "1";
+            slide.style.zIndex = "100";
+          } else if (absOffset === 1) {
+            // Lớp 1: Đẩy sang 2 bên 65%, thu nhỏ còn 85%
+            slide.style.transform = `translateX(${dir * 65}%) scale(0.85)`;
+            slide.style.opacity = "0.9";
+            slide.style.zIndex = "99";
+          } else if (absOffset === 2) {
+            // Lớp 2: Đẩy sang 2 bên 120%, thu nhỏ còn 70%
+            slide.style.transform = `translateX(${dir * 120}%) scale(0.7)`;
+            slide.style.opacity = "0.6";
+            slide.style.zIndex = "98";
+          } else {
+            // Lớp 3 (ngoài cùng): Đẩy sang 2 bên 170%, thu nhỏ còn 55%
+            slide.style.transform = `translateX(${dir * 170}%) scale(0.55)`;
+            slide.style.opacity = "0.3";
+            slide.style.zIndex = "97";
+          }
+        });
+
+        dots.forEach((d, i) =>
+          d.classList.toggle("active", i === currentIndex),
+        );
+      }
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+        resetAutoPlay();
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+        resetAutoPlay();
+      }
+
+      function goToSlide(idx) {
+        currentIndex = idx;
+        updateCarousel();
+        resetAutoPlay();
+      }
+
+      function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayTimer = setInterval(() => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateCarousel();
+        }, AUTO_PLAY_DELAY);
+      }
+
+      function stopAutoPlay() {
+        if (autoPlayTimer) {
+          clearInterval(autoPlayTimer);
+          autoPlayTimer = null;
+        }
+      }
+
+      function resetAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+      }
+
+      // Tạm dừng khi rê chuột / chạm tay & hỗ trợ vuốt trên điện thoại
+      let touchStartX = 0;
+      if (carouselContainer) {
+        carouselContainer.addEventListener("mouseenter", stopAutoPlay);
+        carouselContainer.addEventListener("mouseleave", startAutoPlay);
+
+        carouselContainer.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoPlay();
+          },
+          { passive: true },
+        );
+
+        carouselContainer.addEventListener("touchend", (e) => {
+          const diff = touchStartX - e.changedTouches[0].screenX;
+          if (Math.abs(diff) > 40) {
+            diff > 0 ? nextSlide() : prevSlide();
+          } else {
+            startAutoPlay();
+          }
+        });
+      }
+
+      updateCarousel();
+      startAutoPlay();
+
+      // Khởi chạy
+      updateCarousel();
+      startAutoPlay();
+      // 5. Xác nhận tham dự
+      function confirmAttendance() {
+        const guest = guestName || "Quý khách";
+        alert(
+          `Cảm ơn ${guest} đã xác nhận tham dự tiệc cưới của Kiều Diệp & Ngọc Chung!`,
+        );
+      }
+
+      // DÁN LINK CSV BẠN VỪA COPY Ở BƯỚC 2 VÀO ĐÂY:
+      const GOOGLE_SHEET_CSV_URL =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vR00uIPMR0ePoksOWdmXvPm36XtNylbDq7Az9s8wLD86SwMXW9x3rSvJaP5x4czJ5Xy8iF0VZaMn-tA/pub?gid=0&single=true&output=csv";
+
+      function parseCSV(csvText) {
+        const lines = csvText.trim().split(/\r?\n/);
+        const guestMap = {};
+
+        for (let i = 1; i < lines.length; i++) {
+          // Regex tách đúng các cột CSV kể cả khi bên trong có dấu phẩy
+          const row = [];
+          let current = "";
+          let inQuotes = false;
+
+          for (let char of lines[i]) {
+            if (char === '"') {
+              inQuotes = !inQuotes;
+            } else if (char === "," && !inQuotes) {
+              row.push(current.trim());
+              current = "";
+            } else {
+              current += char;
+            }
+          }
+          row.push(current.trim());
+
+          if (row.length >= 2) {
+            const id = row[0];
+            const name = row[1];
+            if (id && name) {
+              guestMap[id] = name;
+            }
+          }
+        }
+        return guestMap;
+      }
+
+      async function loadGuestFromGoogleSheet() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestId = urlParams.get("id");
+        const directName = urlParams.get("guest") || urlParams.get("name");
+
+        // Hàm cập nhật tên lên giao diện
+        const applyGuestName = (nameText) => {
+          document.querySelectorAll(".guest-display-splash").forEach((el) => {
+            el.textContent = nameText;
+          });
+        };
+
+        // Trường hợp 1: Link truyền trực tiếp ?guest=Tên Khách
+        if (directName && directName.trim() !== "") {
+          applyGuestName(directName.trim());
+          return;
+        }
+
+        // Trường hợp 2: Link dùng ?id=... -> Tải dữ liệu từ Google Sheet
+        if (guestId) {
+          try {
+            // Thêm timestamp nhỏ để tránh trình duyệt lưu cache cũ khi bạn vừa sửa Sheet
+            const response = await fetch(
+              `${GOOGLE_SHEET_CSV_URL}&t=${Date.now()}`,
+            );
+            if (!response.ok) throw new Error("Không thể tải dữ liệu Sheet");
+
+            const csvText = await response.text();
+            const guestData = parseCSV(csvText);
+
+            if (guestData[guestId]) {
+              applyGuestName(guestData[guestId]);
+            } else {
+              applyGuestName("Quý Khách");
+            }
+          } catch (error) {
+            console.error("Lỗi kết nối Google Sheet:", error);
+            applyGuestName("Quý Khách");
+          }
+        } else {
+          // Mở link gốc không có tham số
+          applyGuestName("Quý Khách");
+        }
+      }
+
+      // Chạy ngay khi tải trang
+      loadGuestFromGoogleSheet();
+      // Update ngày wedding
+      const calendarData = {
+        title: "Đám cưới Nguyễn Thị Kiều Diệp & Đặng Ngọc Chung",
+        // Định dạng giờ UTC (Giờ VN trừ 7 tiếng): 17:30 VN = 10:30 UTC, 20:30 VN = 13:30 UTC
+        dates: "20260103T103000Z/20260103T133000Z",
+        location: "Thôn Đức Tân, Mộ Đức, Quảng Ngãi",
+        details:
+          "Trân trọng kính mời bạn tham dự lễ vu quy & tiệc cưới của Nguyễn Thị Kiều Diệp & Đặng Ngọc Chung.",
+      };
+
+      const calLink = document.querySelector(".add-to-calendar-link");
+      if (calLink) {
+        calLink.href =
+          `https://www.google.com/calendar/render?action=TEMPLATE` +
+          `&text=${encodeURIComponent(calendarData.title)}` +
+          `&dates=${calendarData.dates}` +
+          `&ctz=Asia/Ho_Chi_Minh` +
+          `&details=${encodeURIComponent(calendarData.details)}` +
+          `&location=${encodeURIComponent(calendarData.location)}`;
+      }
+      const bgMusic = document.getElementById("bgMusic");
+      const musicToggleBtn = document.getElementById("musicToggleBtn");
+      const openCardBtn = document.querySelector(".btn-open"); // Nút "Mở Thiệp" ở màn hình đầu
+
+      // Hàm bật nhạc
+      function playWeddingMusic() {
+        if (!bgMusic) return;
+        bgMusic.volume = 0.7; // Âm lượng 70% cho dịu tai
+        bgMusic
+          .play()
+          .then(() => {
+            musicToggleBtn.classList.add("is-playing");
+          })
+          .catch((err) => {
+            console.log(
+              "Trình duyệt đang chờ thao tác chạm của người dùng:",
+              err,
+            );
+          });
+      }
+
+      // 1. Tự động phát nhạc ngay khoảnh khắc khách bấm nút "Mở Thiệp"
+      if (openCardBtn) {
+        openCardBtn.addEventListener("click", () => {
+          playWeddingMusic();
+        });
+      }
+
+      // 2. Xử lý khi khách bấm trực tiếp vào nút đĩa nhạc góc màn hình để Bật / Tắt
+      if (musicToggleBtn && bgMusic) {
+        musicToggleBtn.addEventListener("click", () => {
+          if (bgMusic.paused) {
+            playWeddingMusic();
+          } else {
+            bgMusic.pause();
+            musicToggleBtn.classList.remove("is-playing");
+          }
+        });
+      }
+
+      // 3. Tự động tạm dừng nhạc khi khách thoát trình duyệt / chuyển sang app khác (Zalo, Messenger)
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden && bgMusic && !bgMusic.paused) {
+          bgMusic.pause();
+          musicToggleBtn.classList.remove("is-playing");
+        }
+      });
+      // TỰ ĐỘNG TẠO HIỆU ỨNG XUẤT HIỆN CHO TOÀN BỘ CHỮ KHI LƯỚT TRANG
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Chọn tất cả các thẻ chứa chữ trên trang
+        const textCandidates = document.querySelectorAll(
+          "h1, h2, h3, h4, p, blockquote, .add-to-calendar-link, .schedule-time, .schedule-event",
+        );
+
+        const revealElements = [];
+
+        textCandidates.forEach((el) => {
+          // Bỏ qua các phần đã có hiệu ứng riêng (Thiệp mở đầu, Section cuối Chung & Diệp, Nút nhạc)
+          if (
+            el.closest(".welcome-card") ||
+            el.closest(".closing-section") ||
+            el.closest(".music-btn") ||
+            el.classList.contains("no-reveal")
+          ) {
+            return;
+          }
+
+          // Tránh gắn trùng hiệu ứng cho thẻ con nếu thẻ cha đã được gắn
+          if (
+            el.parentElement &&
+            el.parentElement.closest(".scroll-reveal-text")
+          ) {
+            return;
+          }
+
+          el.classList.add("scroll-reveal-text");
+          revealElements.push(el);
+        });
+
+        // 2. Theo dõi vị trí cuộn màn hình để bật hiệu ứng từng dòng nối tiếp nhau
+        const textObserver = new IntersectionObserver(
+          (entries, observer) => {
+            let visibleBatchIndex = 0;
+
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Tạo độ trễ nhẹ (90ms) giữa các dòng cùng xuất hiện một lúc để tạo cảm giác mượt mà
+                const delay = visibleBatchIndex * 90;
+                entry.target.style.transitionDelay = `${delay}ms`;
+
+                entry.target.classList.add("is-revealed");
+                visibleBatchIndex++;
+
+                // Ngừng theo dõi sau khi chữ đã hiện xong
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12, // Chữ lọt vào 12% khung hình là bắt đầu hiện
+            rootMargin: "0px 0px -30px 0px",
+          },
+        );
+
+        revealElements.forEach((el) => textObserver.observe(el));
+      });
+      // HIỆU ỨNG BUNG TRÁI TIM KHI BẤM NÚT MỞ THIỆP
+      function createHeartBurst(targetButton, heartCount = 28) {
+        if (!targetButton) return;
+
+        const rect = targetButton.getBoundingClientRect();
+        // Lấy tọa độ tâm của nút Mở Thiệp
+        const startX = rect.left + rect.width / 2;
+        const startY = rect.top + rect.height / 2;
+
+        // Bảng màu đồng bộ tông đỏ đô & kem của thiệp
+        const heartColors = [
+          "#511419",
+          "#7d2028",
+          "#a83843",
+          "#c96a74",
+          "#c59b5f",
+        ];
+
+        for (let i = 0; i < heartCount; i++) {
+          const heart = document.createElement("div");
+          heart.className = "floating-heart";
+
+          // Chọn màu và kích thước ngẫu nhiên
+          const color =
+            heartColors[Math.floor(Math.random() * heartColors.length)];
+          const size = Math.floor(Math.random() * 14) + 12; // Từ 12px đến 26px
+
+          heart.innerHTML = `
+            <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        `;
+
+          // Vị trí xuất phát hơi tản nhẹ quanh bề ngang nút bấm
+          const offsetX = (Math.random() - 0.5) * (rect.width * 0.8);
+          heart.style.left = `${startX + offsetX}px`;
+          heart.style.top = `${startY}px`;
+
+          // Quỹ đạo bay: Tỏa sang 2 bên (-160px đến +160px) và bay vút lên trên (-140px đến -340px)
+          const tx = (Math.random() - 0.5) * 320;
+          const ty = -(Math.random() * 200 + 140);
+          const rot = (Math.random() - 0.5) * 90;
+          const scale = (Math.random() * 0.5 + 0.75).toFixed(2);
+          const duration = (Math.random() * 0.9 + 1.4).toFixed(2); // 1.4s - 2.3s
+          const delay = (Math.random() * 0.25).toFixed(2); // Trễ nhẹ 0 - 0.25s cho tự nhiên
+
+          heart.style.setProperty("--tx", `${tx}px`);
+          heart.style.setProperty("--ty", `${ty}px`);
+          heart.style.setProperty("--rot", `${rot}deg`);
+          heart.style.setProperty("--scale", scale);
+          heart.style.setProperty("--duration", `${duration}s`);
+          heart.style.setProperty("--delay", `${delay}s`);
+
+          document.body.appendChild(heart);
+
+          // Tự động dọn dẹp khỏi DOM sau khi bay xong
+          setTimeout(
+            () => {
+              heart.remove();
+            },
+            (parseFloat(duration) + parseFloat(delay)) * 1000 + 100,
+          );
+        }
+      }
+
+      const openSoundEffect = document.getElementById("openSoundEffect");
+      const btnOpenCard = document.querySelector(".btn-open");
+
+      // Hàm phát hiệu ứng âm thanh (Sound Effect)
+      function playOpenSoundEffect() {
+        if (!openSoundEffect) return;
+        openSoundEffect.currentTime = 0; // Đưa về đầu file để phát ngay lập tức
+        openSoundEffect.volume = 0.85; // Âm lượng hiệu ứng 85% cho rõ nét
+        openSoundEffect.play().catch((err) => {
+          console.log("Chưa thể phát hiệu ứng âm thanh:", err);
+        });
+      }
+
+      // Gắn toàn bộ hiệu ứng vào khoảnh khắc bấm nút "Mở Thiệp"
+      if (btnOpenCard) {
+        btnOpenCard.addEventListener("click", () => {
+          playOpenSoundEffect(); // 1. Kêu tiếng hiệu ứng
+          createHeartBurst(btnOpenCard, 30); // 2. Bung 30 trái tim bay lên
+          playWeddingMusic(); // 3. Bắt đầu phát nhạc nền đám cưới
+        });
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let isAutoScrolling = false;
+        let animationFrameId = null;
+        let accumulatedScroll = 0; // Biến cộng dồn để giải quyết lỗi làm tròn số thập phân
+        let delayTimer = null;
+
+        const scrollSpeed = 0.8; // Tốc độ cuộn mượt (0.6: chậm, 0.8: vừa, 1.2: nhanh)
+        const startDelay = 2000; // Chờ 2 giây sau khi mở thiệp rồi mới cuộn
+
+        // Tự động tìm phần tử thực sự đang có thanh cuộn (window hoặc div bọc ngoài)
+        function getScrollTarget() {
+          const candidates = [
+            document.scrollingElement,
+            document.documentElement,
+            document.body,
+            ...document.querySelectorAll("div, main, section"),
+          ];
+          for (let el of candidates) {
+            if (!el) continue;
+            const style = window.getComputedStyle(el);
+            const canScrollY =
+              el === document.scrollingElement ||
+              style.overflowY === "auto" ||
+              style.overflowY === "scroll";
+            if (canScrollY && el.scrollHeight > el.clientHeight + 20) {
+              return el;
+            }
+          }
+          return window;
+        }
+
+        function stepScroll() {
+          if (!isAutoScrolling) return;
+
+          const target = getScrollTarget();
+          accumulatedScroll += scrollSpeed;
+
+          // Chỉ thực hiện cuộn khi tích lũy đủ ít nhất 1px
+          if (accumulatedScroll >= 1) {
+            const pixels = Math.floor(accumulatedScroll);
+            accumulatedScroll -= pixels;
+
+            if (target === window) {
+              window.scrollBy(0, pixels);
+              if (
+                window.innerHeight + window.scrollY >=
+                document.documentElement.scrollHeight - 2
+              ) {
+                stopAutoScroll();
+                return;
+              }
+            } else {
+              target.scrollTop += pixels;
+              if (
+                target.clientHeight + target.scrollTop >=
+                target.scrollHeight - 2
+              ) {
+                stopAutoScroll();
+                return;
+              }
+            }
+          }
+
+          animationFrameId = requestAnimationFrame(stepScroll);
+        }
+
+        function startAutoScroll() {
+          if (isAutoScrolling) return;
+          isAutoScrolling = true;
+          accumulatedScroll = 0;
+          animationFrameId = requestAnimationFrame(stepScroll);
+        }
+
+        function stopAutoScroll() {
+          isAutoScrolling = false;
+          if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+          }
+        }
+
+        function scheduleAutoScroll() {
+          clearTimeout(delayTimer);
+          stopAutoScroll();
+          delayTimer = setTimeout(startAutoScroll, startDelay);
+        }
+
+        // 1. Khởi chạy lần đầu khi mở trang
+        scheduleAutoScroll();
+
+        // 2. Nếu có màn hình chờ/phong bì: khi khách bấm mở phong bì, hẹn lại 2 giây rồi bắt đầu cuộn
+        document.addEventListener("click", function (e) {
+          if (
+            e.target.closest(
+              "[class*='splash'], [class*='envelope'], [class*='open'], button",
+            )
+          ) {
+            scheduleAutoScroll();
+          }
+        });
+
+        // 3. Dừng ngay lập tức khi khách tự vuốt màn hình hoặc lăn chuột
+        ["wheel", "touchstart", "keydown"].forEach(function (eventType) {
+          window.addEventListener(
+            eventType,
+            function () {
+              clearTimeout(delayTimer);
+              stopAutoScroll();
+            },
+            { passive: true },
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
