@@ -564,7 +564,8 @@
         "https://docs.google.com/spreadsheets/d/e/2PACX-1vR00uIPMR0ePoksOWdmXvPm36XtNylbDq7Az9s8wLD86SwMXW9x3rSvJaP5x4czJ5Xy8iF0VZaMn-tA/pub?gid=0&single=true&output=csv";
 
       // (Tùy chọn) Dán link Web App Google Apps Script vào đây nếu muốn tự động tick X vào cột Điểm danh:
-      const GOOGLE_SCRIPT_RSVP_URL = "";
+      const GOOGLE_SCRIPT_RSVP_URL =
+        "https://script.google.com/macros/s/AKfycbyJ8VX02OkOzrLuYZ2dogeMuw7C5DXxRW7ygU5bLQ71b_rc1pFvQdy5YYDXAEKg_e5d/exec";
 
       let currentGuestName = "Quý Khách";
 
@@ -913,6 +914,8 @@
         const guestId = urlParams.get("id");
         const btn = document.querySelector(".rsvp-btn");
 
+        if (btn && btn.dataset.confirmed === "true") return;
+
         if (GOOGLE_SCRIPT_RSVP_URL && guestId) {
           const originalText = btn ? btn.innerText : "XÁC NHẬN THAM DỰ";
           if (btn) {
@@ -931,8 +934,9 @@
             .then(() => {
               if (btn) {
                 btn.innerText = "ĐÃ XÁC NHẬN ✔";
-                btn.style.backgroundColor = "#4caf50";
+                btn.style.backgroundColor = "#2e7d32";
                 btn.style.color = "#ffffff";
+                btn.dataset.confirmed = "true";
               }
               alert(
                 `Cảm ơn ${currentGuestName} đã xác nhận tham dự tiệc cưới của Kiều Diệp & Ngọc Chung!`,
@@ -948,6 +952,7 @@
         } else {
           if (btn) {
             btn.innerText = "ĐÃ XÁC NHẬN ✔";
+            btn.dataset.confirmed = "true";
           }
           alert(
             `Cảm ơn ${currentGuestName} đã xác nhận tham dự tiệc cưới của Kiều Diệp & Ngọc Chung!`,
